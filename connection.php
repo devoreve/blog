@@ -2,10 +2,7 @@
 
 function getConnection(): PDO
 {
-	$host = 'localhost';
-	$dbname = 'projet_blog';
-	$user = 'demo';
-	$password = 'demo';
+	require 'config.php';
 
 	return new PDO("mysql:host=$host;dbname=$dbname;charset=UTF8", $user, $password, [
 		PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
